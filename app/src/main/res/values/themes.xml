@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Notes" parent="Base.Theme.Notes" />
+    <style name="Theme.Notes" parent="Base.Theme.Notes">
+        <item name="android:fontFamily">@font/el_messiri_medium</item>
+    </style>
 </resources>

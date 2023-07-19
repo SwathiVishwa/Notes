@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="hmm_looks_like_you_don_t_n_have_any_notes">Hmm.. looks like you don\'t \n have any notes</string>
+    <string name="it_s_empty">It\'s Empty</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="done">Done</string>
 </resources>
