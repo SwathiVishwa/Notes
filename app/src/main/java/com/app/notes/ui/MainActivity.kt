@@ -16,12 +16,17 @@ class MainActivity : AppCompatActivity(), RecyclerClickListener {
     private var list: List<NotesSchema> = listOf()
 
     private val noteDatabase by lazy { NotesDatabase.getDatabase(this).noteDao() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.apply {
+        binding.getAllData()
+    }
+
+    private fun ActivityMainBinding.getAllData() {
+        this.apply {
             lifecycleScope.launch {
                 noteDatabase.getNote().collect { notesList ->
                     placeHolder(

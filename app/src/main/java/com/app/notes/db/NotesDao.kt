@@ -1,11 +1,9 @@
 package com.app.notes.db
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -22,5 +20,8 @@ interface NotesDao {
     @Query("SELECT * FROM notestable WHERE notestable.SNo = :sno")
     fun viewNotes(sno: Int): Flow<NotesSchema>
 
+    //Update the Specific Data
+    @Query("UPDATE notestable SET Title =:title,Description =:desc  WHERE notestable.SNo = :sno")
+    suspend fun updateNotes(sno: Int, title: String, desc: String)
 
 }

@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Notes" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -7,5 +7,6 @@
 
     <style name="Theme.Notes" parent="Base.Theme.Notes">
         <item name="android:fontFamily">@font/el_messiri_medium</item>
+        <item name="android:statusBarColor">@color/yellow</item>
     </style>
 </resources>

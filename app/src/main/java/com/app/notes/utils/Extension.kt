@@ -1,6 +1,8 @@
 package com.app.notes.utils
 
+import android.content.Context
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +13,13 @@ fun View.visible() {
 
 fun View.gone() {
     this.visibility = View.GONE
+}
+
+fun showToast(context: Context, msg: String) {
+    Toast.makeText(
+        context,
+        msg, Toast.LENGTH_LONG
+    ).show()
 }
 
 fun placeHolder(

@@ -1,13 +1,13 @@
 package com.app.notes.ui
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.app.notes.R
 import com.app.notes.databinding.ActivityAddNoteBinding
 import com.app.notes.db.NotesDatabase
 import com.app.notes.db.NotesSchema
+import com.app.notes.utils.showToast
 import kotlinx.coroutines.launch
 import java.util.Date
 
@@ -31,11 +31,10 @@ class AddNoteActivity : AppCompatActivity() {
                     lifecycleScope.launch {
                         noteDatabase.addNote(newNote)
                         onBackPressed()
-                        Toast.makeText(
-                            this@AddNoteActivity,
-                            getString(R.string.notes_added_successfully),
-                            Toast.LENGTH_LONG
-                        ).show()
+                        showToast(
+                            applicationContext,
+                            getString(R.string.notes_added_successfully)
+                        )
                     }
                 }
             }
@@ -49,10 +48,10 @@ class AddNoteActivity : AppCompatActivity() {
             ) {
                 true
             } else {
-                Toast.makeText(
+                showToast(
                     this@AddNoteActivity,
-                    getString(R.string.enter_the_data), Toast.LENGTH_LONG
-                ).show()
+                    getString(R.string.enter_the_data)
+                )
                 false
             }
         }
