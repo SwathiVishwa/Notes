@@ -7,6 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.app.notes.databinding.ActivityMainBinding
 import com.app.notes.db.NotesDatabase
 import com.app.notes.db.NotesSchema
+import com.app.notes.utils.Constants
 import com.app.notes.utils.placeHolder
 import kotlinx.coroutines.launch
 
@@ -46,7 +47,12 @@ class MainActivity : AppCompatActivity(), RecyclerClickListener {
         TODO("Not yet implemented")
     }
 
-    override fun onItemClick(position: Int) {
-        TODO("Not yet implemented")
+    override fun onItemClick(position: Int, data: NotesSchema) {
+        val intent = Intent(this@MainActivity, ViewNoteActivity::class.java)
+        intent.putExtra(Constants.columnSno, data.sNo)
+        intent.putExtra(Constants.columnDate, data.date)
+        intent.putExtra(Constants.columnTitle, data.title)
+        intent.putExtra(Constants.columnDescription, data.description)
+        startActivity(intent)
     }
 }
