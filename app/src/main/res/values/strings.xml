@@ -4,4 +4,6 @@
     <string name="it_s_empty">It\'s Empty</string>
     <string name="add_notes">Add Notes</string>
     <string name="done">Done</string>
+    <string name="enter_the_data">Enter the data</string>
+    <string name="notes_added_successfully">Notes Added SuccessFully</string>
 </resources>

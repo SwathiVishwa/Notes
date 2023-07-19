@@ -32,7 +32,7 @@ class NotesAdapter(
             tvDate.text = "Created at : ${item.date}"
             itemTextView.text = item.title
             itemView.setOnClickListener {
-                clickListener.onItemRemoveClick(position)
+                clickListener.onItemClick(position, item)
             }
         }
     }
@@ -44,6 +44,6 @@ class NotesAdapter(
 
 interface RecyclerClickListener {
     fun onItemRemoveClick(position: Int)
-    fun onItemClick(position: Int)
+    fun onItemClick(position: Int, data: NotesSchema)
 }
 

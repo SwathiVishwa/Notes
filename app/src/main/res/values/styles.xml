@@ -25,4 +25,14 @@
         <item name="android:fontFamily">@font/el_messiri_medium</item>
     </style>
 
+    <style name="editText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/light</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:fontFamily">@font/el_messiri_semibold</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
 </resources>
