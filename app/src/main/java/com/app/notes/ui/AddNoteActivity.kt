@@ -7,6 +7,7 @@ import com.app.notes.R
 import com.app.notes.databinding.ActivityAddNoteBinding
 import com.app.notes.db.NotesDatabase
 import com.app.notes.db.NotesSchema
+import com.app.notes.utils.backPressed
 import com.app.notes.utils.showToast
 import kotlinx.coroutines.launch
 import java.util.Date
@@ -21,7 +22,8 @@ class AddNoteActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.apply {
             ivBack.setOnClickListener {
-                onBackPressed()
+
+                this@AddNoteActivity.backPressed()
             }
             tvDone.setOnClickListener {
                 if (validate(binding)) {
@@ -33,7 +35,8 @@ class AddNoteActivity : AppCompatActivity() {
                         )
                     lifecycleScope.launch {
                         noteDatabase.addNote(newNote)
-                        onBackPressed()
+
+                        this@AddNoteActivity.backPressed()
                         showToast(
                             applicationContext,
                             getString(R.string.notes_added_successfully)

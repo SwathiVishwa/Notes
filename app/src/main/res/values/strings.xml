@@ -8,4 +8,8 @@
     <string name="notes_added_successfully">Notes Added SuccessFully</string>
     <string name="data_updated_successfully">Data Updated Successfully</string>
     <string name="data_deleted_successfully">Data Deleted Successfully</string>
+    <string name="enter_the_title">Enter the Title</string>
+    <string name="enter_the_description">Enter the Description</string>
+    <string name="view_notes">View Notes</string>
+    <string name="update">Update</string>
 </resources>

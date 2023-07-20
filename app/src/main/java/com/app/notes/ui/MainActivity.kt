@@ -48,10 +48,6 @@ class MainActivity : AppCompatActivity(), RecyclerClickListener {
         }
     }
 
-    override fun onItemRemoveClick(position: Int) {
-        TODO("Not yet implemented")
-    }
-
     override fun onItemClick(position: Int, data: NotesSchema) {
         val intent = Intent(this@MainActivity, ViewNoteActivity::class.java)
         intent.putExtra(Constants.columnSno, data.sNo)

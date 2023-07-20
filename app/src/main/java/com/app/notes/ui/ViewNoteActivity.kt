@@ -7,6 +7,7 @@ import com.app.notes.R
 import com.app.notes.databinding.ActivityViewNoteBinding
 import com.app.notes.db.NotesDatabase
 import com.app.notes.utils.Constants
+import com.app.notes.utils.backPressed
 import com.app.notes.utils.showToast
 import kotlinx.coroutines.launch
 
@@ -22,14 +23,14 @@ class ViewNoteActivity : AppCompatActivity() {
         val sNo = getData.getIntExtra(Constants.columnSno, 1)
         binding.apply {
             ivBack.setOnClickListener {
-                onBackPressed()
+                this@ViewNoteActivity.backPressed()
             }
             this.viewSelectedData(sNo)
             tvUpdate.setOnClickListener {
                 this.updateSelectedData(sNo)
             }
             ivDelete.setOnClickListener {
-                onBackPressed()
+                this@ViewNoteActivity.backPressed()
                 this.deleteRow(sNo)
             }
         }
@@ -55,7 +56,9 @@ class ViewNoteActivity : AppCompatActivity() {
                     edtTitle.text.toString(),
                     edtDescription.text.toString()
                 )
-                onBackPressed()
+
+                this@ViewNoteActivity.backPressed()
+
                 showToast(applicationContext, getString(R.string.data_updated_successfully))
             }
         }

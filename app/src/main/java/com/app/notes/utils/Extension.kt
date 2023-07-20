@@ -3,6 +3,7 @@ package com.app.notes.utils
 import android.content.Context
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
@@ -40,4 +41,10 @@ fun placeHolder(
         noItem.visible()
         noDataSub.visible()
     }
+}
+
+fun AppCompatActivity.backPressed() {
+
+    this.onBackPressedDispatcher.onBackPressed()
+
 }

@@ -21,7 +21,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTitle"
         style="@style/Heading"
-        android:text="View  Notes"
+        android:text="@string/view_notes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
         style="@style/editText"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:hint="Enter the Title"
+        android:hint="@string/enter_the_title"
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/bg_edittext"
         android:gravity="top"
-        android:hint="Enter the Description"
+        android:hint="@string/enter_the_description"
         android:maxLines="10"
         android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@id/tvUpdate"
@@ -65,7 +65,7 @@
         android:id="@+id/tvUpdate"
         style="@style/Heading"
         android:layout_width="wrap_content"
-        android:text="Update"
+        android:text="@string/update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtDescription" />

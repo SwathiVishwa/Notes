@@ -45,7 +45,6 @@ class NotesAdapter(
 }
 
 interface RecyclerClickListener {
-    fun onItemRemoveClick(position: Int)
     fun onItemClick(position: Int, data: NotesSchema)
 }
 
