@@ -7,4 +7,5 @@
     <string name="enter_the_data">Enter the data</string>
     <string name="notes_added_successfully">Notes Added SuccessFully</string>
     <string name="data_updated_successfully">Data Updated Successfully</string>
+    <string name="data_deleted_successfully">Data Deleted Successfully</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.app.notes.db
 
-import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -20,7 +19,7 @@ data class NotesSchema(
     @ColumnInfo(name = columnDate)
     val date: Date,
     @ColumnInfo(name = columnTitle)
-    val title: String,
+    val title: String?,
     @ColumnInfo(name = columnDescription)
-    val description: String
+    val description: String?
 )

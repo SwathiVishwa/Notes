@@ -25,6 +25,22 @@ class ViewNoteActivity : AppCompatActivity() {
             tvUpdate.setOnClickListener {
                 this.updateSelectedData(sNo)
             }
+            ivDelete.setOnClickListener {
+                onBackPressed()
+                this.deleteRow(sNo)
+            }
+        }
+    }
+
+    private fun ActivityViewNoteBinding.deleteRow(sNo: Int) {
+        this.apply {
+            lifecycleScope.launch {
+                noteDatabase.deleteRow(
+                    sNo
+                )
+
+                showToast(applicationContext, getString(R.string.data_deleted_successfully))
+            }
         }
     }
 
@@ -46,8 +62,8 @@ class ViewNoteActivity : AppCompatActivity() {
         this.apply {
             lifecycleScope.launch {
                 noteDatabase.viewNotes(sNo).collect {
-                    edtTitle.setText(it.title)
-                    edtDescription.setText(it.description)
+                    edtTitle.setText(it?.title)
+                    edtDescription.setText(it?.description)
                 }
             }
         }

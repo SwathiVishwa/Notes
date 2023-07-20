@@ -24,4 +24,7 @@ interface NotesDao {
     @Query("UPDATE notestable SET Title =:title,Description =:desc  WHERE notestable.SNo = :sno")
     suspend fun updateNotes(sno: Int, title: String, desc: String)
 
+    @Query("DELETE  FROM notestable WHERE notestable.SNO =:sno")
+    suspend fun deleteRow(sno: Int)
+
 }
