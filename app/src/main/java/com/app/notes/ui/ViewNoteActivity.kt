@@ -21,6 +21,9 @@ class ViewNoteActivity : AppCompatActivity() {
         val getData = intent
         val sNo = getData.getIntExtra(Constants.columnSno, 1)
         binding.apply {
+            ivBack.setOnClickListener {
+                onBackPressed()
+            }
             this.viewSelectedData(sNo)
             tvUpdate.setOnClickListener {
                 this.updateSelectedData(sNo)

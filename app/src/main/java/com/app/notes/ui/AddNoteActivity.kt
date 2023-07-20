@@ -20,6 +20,9 @@ class AddNoteActivity : AppCompatActivity() {
         val binding = ActivityAddNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.apply {
+            ivBack.setOnClickListener {
+                onBackPressed()
+            }
             tvDone.setOnClickListener {
                 if (validate(binding)) {
                     val newNote =

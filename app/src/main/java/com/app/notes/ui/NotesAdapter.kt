@@ -17,6 +17,7 @@ class NotesAdapter(
         var tvId: TextView = view.findViewById(R.id.tvId)
         var tvDate: TextView = view.findViewById(R.id.tvDate)
         var itemTextView: TextView = view.findViewById(R.id.tvTitle)
+        var tvDesc: TextView = view.findViewById(R.id.tvDesc)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -31,6 +32,7 @@ class NotesAdapter(
             tvId.text = "${item.sNo}."
             tvDate.text = "Created at : ${item.date}"
             itemTextView.text = item.title
+            tvDesc.text = item.description
             itemView.setOnClickListener {
                 clickListener.onItemClick(position, item)
             }
